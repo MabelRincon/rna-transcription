@@ -1,4 +1,4 @@
-package dev.mabel.template_java;
+package dev.mabel.rna;
 public final class App {
     private App() {}
 
