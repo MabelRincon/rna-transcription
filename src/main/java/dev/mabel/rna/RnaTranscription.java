@@ -23,7 +23,7 @@ public class RnaTranscription {
                     rnaStrand.append('U');
                     break;
                 default:
-                    throw new IllegalArgumentException("Invalid nucleotide: " + nucleotide);
+                    throw new IllegalArgumentException("Invalid nucleotide: " + nucleotide + ". Valid nucleotides are G, C, T, and A.");
             }
         }
         return rnaStrand.toString();
