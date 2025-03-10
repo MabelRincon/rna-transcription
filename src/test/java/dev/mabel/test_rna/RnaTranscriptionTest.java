@@ -5,6 +5,7 @@ import dev.mabel.rna.RnaTranscription;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class RnaTranscriptionTest {
@@ -49,5 +50,15 @@ public class RnaTranscriptionTest {
     public void testTranscriptionOfMultipleNucleotides() {
         RnaTranscription transcription = new RnaTranscription();
         assertEquals("UGCACCAGAAUU", transcription.transcribe("ACGTGGTCTTAA"));
+    }
+
+    @Test
+    @DisplayName("Test if the transcribe method throws an IllegalArgumentException when given an invalid input.")
+        public void testInvalidInput() {
+        RnaTranscription rnaTranscription = new RnaTranscription();
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            rnaTranscription.transcribe("ACGTX");
+        });
+        assertEquals("Invalid nucleotide: X. Valid nucleotides are G, C, T, and A.", exception.getMessage());
     }
 }
