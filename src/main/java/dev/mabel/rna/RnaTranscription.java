@@ -4,8 +4,8 @@ public class RnaTranscription {
 
     public String transcribe(String dnaStrand) {
         if (dnaStrand.isEmpty()) {
-           return "";
-    }
+            return "";
+        }
 
         StringBuilder rnaStrand = new StringBuilder();
         for (char nucleotide : dnaStrand.toCharArray()) {
@@ -23,7 +23,8 @@ public class RnaTranscription {
                     rnaStrand.append('U');
                     break;
                 default:
-                    throw new IllegalArgumentException("Invalid nucleotide: " + nucleotide + ". Valid nucleotides are G, C, T, and A.");
+                    throw new IllegalArgumentException(
+                            "Invalid nucleotide: " + nucleotide + ". Valid nucleotides are G, C, T, and A.");
             }
         }
         return rnaStrand.toString();
