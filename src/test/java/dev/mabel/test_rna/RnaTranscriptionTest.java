@@ -43,4 +43,11 @@ public class RnaTranscriptionTest {
         RnaTranscription transcription = new RnaTranscription();
         assertEquals("U", transcription.transcribe("A"));
     }
+
+    @Test
+    @DisplayName("Test if the transcribe method correctly transcribes multiple nucleotides.")
+    public void testTranscriptionOfMultipleNucleotides() {
+        RnaTranscription transcription = new RnaTranscription();
+        assertEquals("UGCACCAGAAUU", transcription.transcribe("ACGTGGTCTTAA"));
+    }
 }
