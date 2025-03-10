@@ -22,5 +22,4 @@ public class RnaTranscription {
         }
         return rnaStrand.toString();
     }
-
 }
