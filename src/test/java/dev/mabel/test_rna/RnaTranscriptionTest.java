@@ -36,4 +36,11 @@ public class RnaTranscriptionTest {
         RnaTranscription transcription = new RnaTranscription();
         assertEquals("A", transcription.transcribe("T"));
     }
+
+    @Test
+    @DisplayName("Test if the transcribe method correctly transcribes adenine to uracil.")
+    public void testTranscriptionOfAdenine() {
+        RnaTranscription transcription = new RnaTranscription();
+        assertEquals("U", transcription.transcribe("A"));
+    }
 }
