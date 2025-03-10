@@ -29,4 +29,11 @@ public class RnaTranscriptionTest {
         RnaTranscription transcription = new RnaTranscription();
         assertEquals("C", transcription.transcribe("G"));
     }
+
+    @Test
+    @DisplayName("Test if the transcribe method correctly transcribes thymine to adenine.")
+    public void testTranscriptionOfThymine() {
+        RnaTranscription transcription = new RnaTranscription();
+        assertEquals("A", transcription.transcribe("T"));
+    }
 }
