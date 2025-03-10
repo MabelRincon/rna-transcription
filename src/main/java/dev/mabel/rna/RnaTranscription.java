@@ -16,6 +16,9 @@ public class RnaTranscription {
                 case 'C':
                     rnaStrand.append('G');
                     break;
+                case 'T':
+                    rnaStrand.append('A');
+                    break;
                 default:
                     throw new IllegalArgumentException("Invalid nucleotide: " + nucleotide);
             }
