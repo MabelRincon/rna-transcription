@@ -22,4 +22,11 @@ public class RnaTranscriptionTest {
         RnaTranscription transcription = new RnaTranscription();
         assertEquals("G", transcription.transcribe("C"));
     }
+
+    @Test
+    @DisplayName("Test if the transcribe method correctly transcribes guanine to cytosine.")
+    public void testTranscriptionOfGuanine() {
+        RnaTranscription transcription = new RnaTranscription();
+        assertEquals("C", transcription.transcribe("G"));
+    }
 }
